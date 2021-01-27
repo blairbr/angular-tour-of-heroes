@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+import { HEROES } from '../mock-heroes';
 
 //  interface Hero {
 //   id: number;
@@ -12,12 +13,12 @@ import { Hero } from '../hero';
   styleUrls: ['./heroes.component.css'] //the location of the private css files
 })
 export class HeroesComponent implements OnInit {
+  heroes = HEROES;
+
   hero : Hero = {
     id: 1,
     name: 'Windstorm'
   };
-
-  // hero = 'Windstorm';
 
   constructor() { }
 
