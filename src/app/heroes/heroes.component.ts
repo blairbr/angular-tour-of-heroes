@@ -14,6 +14,7 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
   heroes = HEROES;
+  selectedHero : Hero;
 
   hero : Hero = {
     id: 1,
@@ -24,6 +25,10 @@ export class HeroesComponent implements OnInit {
 
   //Angular calls ngOnInit() shortly after creating a component. It's a good place to put initialization logic.
   ngOnInit(): void {
+  }
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
   }
 
 }
